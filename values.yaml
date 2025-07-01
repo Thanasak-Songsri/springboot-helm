@@ -1,12 +1,9 @@
 image:
   repository: docker.io/thanasak2003/springboot-k8s-demo
-  tag: latest
+  tag: v1.0.64
   pullPolicy: IfNotPresent
-
 replicaCount: 1
-
 service:
   type: ClusterIP
   port: 8080
-
 resources: {}
