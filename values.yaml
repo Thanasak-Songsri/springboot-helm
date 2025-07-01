@@ -1,6 +1,6 @@
 image:
   repository: docker.io/thanasak2003/springboot-k8s-demo
-  tag: v1.0.65
+  tag: v1.0.66
   pullPolicy: IfNotPresent
 replicaCount: 1
 service:
