@@ -5,5 +5,5 @@ image:
 replicaCount: 1
 service:
   type: ClusterIP
-  port: 8080
+  port: 9090
 resources: {}
