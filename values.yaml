@@ -12,6 +12,6 @@ resources: {}
 
 react:
   image:
-    repository: docker.io/thanasak2003/springboot-k8s-demo
+    repository: docker.io/thanasak2003/react-devops
     tag: latest
   port: 80
