@@ -7,3 +7,11 @@ service:
   type: ClusterIP
   port: 9090
 resources: {}
+
+
+
+react:
+  image:
+    repository: docker.io/thanasak2003/springboot-k8s-demo
+    tag: latest
+  port: 80
