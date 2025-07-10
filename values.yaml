@@ -1,17 +1,14 @@
 image:
   repository: docker.io/thanasak2003/springboot-k8s-demo
-  tag: v1.0.67
+  tag: v1.0.103
   pullPolicy: IfNotPresent
 replicaCount: 1
 service:
   type: ClusterIP
   port: 9090
 resources: {}
-
-
-
 react:
   image:
     repository: docker.io/thanasak2003/react-devops
-    tag: latest
+    tag: v1.0.103
   port: 80
