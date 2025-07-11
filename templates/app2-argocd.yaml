@@ -1,0 +1,31 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: springboot-app2
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Thanasak-Songsri/springboot-helm.git  
+    targetRevision: main                                     
+    path: charts/springboot-app2                            
+    helm:
+      values: |
+        image:
+          repository: docker.io/thanasak2003/springboot-k8s-demo
+          tag: v1.0.103
+          pullPolicy: IfNotPresent
+        replicaCount: 1
+        service:
+          type: ClusterIP
+          port: 9090
+        resources: {}
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: springboot-app2
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
