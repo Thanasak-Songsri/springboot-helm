@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/Thanasak-Songsri/springboot-helm.git  
     targetRevision: main                                     
-    path: charts/springboot-app2                            
+    path: .                          
     helm:
       values: |
         image:
